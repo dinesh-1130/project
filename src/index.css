@@ -44,3 +44,7 @@ html {
   -webkit-filter: none !important;
   transition: none !important;
 }
+
+html {
+  scroll-behavior: smooth;
+}

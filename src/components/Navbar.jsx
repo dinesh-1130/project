@@ -56,12 +56,12 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex space-x-10 text-base font-medium text-inherit">
           <li data-aos="fade-down" data-aos-delay="200"><a href="/" className="hover:text-[#6B21A8] transition-colors">Home</a></li>
-          <li data-aos="fade-down" data-aos-delay="250"><a href="/aboutus1" className="hover:text-[#6B21A8] transition-colors">About us</a></li>
-          <li data-aos="fade-down" data-aos-delay="300"><a href="/registrations" className="hover:text-[#6B21A8] transition-colors">Registrations</a></li>
-          <li data-aos="fade-down" data-aos-delay="350"><a href="/rules" className="hover:text-[#6B21A8] transition-colors">Rules & Guidelines</a></li>
+          <li data-aos="fade-down" data-aos-delay="250"><a href="#about" className="hover:text-[#6B21A8] transition-colors">About us</a></li>
+          <li data-aos="fade-down" data-aos-delay="300"><a href="#registrations" className="hover:text-[#6B21A8] transition-colors">Registrations</a></li>
+          <li data-aos="fade-down" data-aos-delay="350"><a href="#rules" className="hover:text-[#6B21A8] transition-colors">Rules & Guidelines</a></li>
           <li data-aos="fade-down" data-aos-delay="400"><a href="/aboutus" className="hover:text-[#6B21A8] transition-colors">Sponsorship</a></li>
-          <li data-aos="fade-down" data-aos-delay="450"><a href="/faqs" className="hover:text-[#6B21A8] transition-colors">FAQ's</a></li>
-          <li data-aos="fade-down" data-aos-delay="500"><a href="/contactus" className="hover:text-[#6B21A8] transition-colors">Contact Us</a></li>
+          <li data-aos="fade-down" data-aos-delay="450"><a href="#faqs" className="hover:text-[#6B21A8] transition-colors">FAQ's</a></li>
+          <li data-aos="fade-down" data-aos-delay="500"><a href="#contact" className="hover:text-[#6B21A8] transition-colors">Contact Us</a></li>
         </ul>
 
         {/* Register Button */}
@@ -114,22 +114,22 @@ export default function Navbar() {
 
           <ul className="space-y-6 text-lg font-semibold">
             <li data-aos="fade-right" data-aos-delay="100" data-aos-duration="400">
-              <a href="/" className="hover:text-[#6B21A8] transition-colors block">Home</a>
+              <a href="/About" className="hover:text-[#6B21A8] transition-colors block">Home</a>
             </li>
             <li data-aos="fade-right" data-aos-delay="150" data-aos-duration="400">
-              <a href="/aboutus1" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">About us</a>
+              <a href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">About us</a>
             </li>
             <li data-aos="fade-right" data-aos-delay="200" data-aos-duration="400">
-              <a href="/registrations" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Registrations</a>
+              <a href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Registrations</a>
             </li>
             <li data-aos="fade-right" data-aos-delay="250" data-aos-duration="400">
-              <a href="/rules" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Rules & Guidelines</a>
+              <a href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Rules & Guidelines</a>
             </li>
             <li data-aos="fade-right" data-aos-delay="300" data-aos-duration="400">
               <a href="/aboutus" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Sponsorship</a>
             </li>
             <li data-aos="fade-right" data-aos-delay="350" data-aos-duration="400">
-              <a href="/faqs" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">FAQ's</a>
+              <a href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">FAQ's</a>
             </li>
             <li data-aos="fade-right" data-aos-delay="400" data-aos-duration="400">
               <a href="/contactus" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Contact Us</a>
