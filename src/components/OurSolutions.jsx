@@ -6,49 +6,48 @@ import { FaUsers, FaUserGraduate, FaProjectDiagram } from "react-icons/fa";
 import "swiper/css";
 
 const ruleCards = [
-    {
+  {
     title: "Team Composition",
     description:
       "Each team must consist of three members: two orators and one researcher for balanced participation and preparation.",
-    icon: <FaUsers className="text-purple-700 text-xl" />,
+    icon: <FaUsers className="text-xl" style={{ color: "#7B941C" }} />,
     image: "/assets/social-1.jpg",
   },
   {
     title: "Eligibility",
     description:
       "Only students from recognized South Indian law colleges are eligible to participate in the competition.",
-    icon: <FaUserGraduate className="text-purple-700 text-xl" />,
+    icon: <FaUserGraduate className="text-xl" style={{ color: "#7B941C" }} />,
     image: "/assets/social-2.jpg",
   },
   {
     title: "Competition Format",
     description:
       "Starts online with prelims and quarters, then transitions onsite for semifinals and finale to test performance under varied environments.",
-    icon: <FaProjectDiagram className="text-purple-700 text-xl" />,
+    icon: <FaProjectDiagram className="text-xl" style={{ color: "#7B941C" }} />,
     image: "/assets/social-3.jpg",
   },
   {
     title: "Team Composition",
     description:
       "Each team must consist of three members: two orators and one researcher for balanced participation and preparation.",
-    icon: <FaUsers className="text-purple-700 text-xl" />,
+    icon: <FaUsers className="text-xl" style={{ color: "#7B941C" }} />,
     image: "/assets/pic-1.jpg",
   },
   {
     title: "Eligibility",
     description:
       "Only students from recognized South Indian law colleges are eligible to participate in the competition.",
-    icon: <FaUserGraduate className="text-purple-700 text-xl" />,
+    icon: <FaUserGraduate className="text-xl" style={{ color: "#7B941C" }} />,
     image: "/assets/pic-2.jpg",
   },
   {
     title: "Competition Format",
     description:
       "Starts online with prelims and quarters, then transitions onsite for semifinals and finale to test performance under varied environments.",
-    icon: <FaProjectDiagram className="text-purple-700 text-xl" />,
+    icon: <FaProjectDiagram className="text-xl" style={{ color: "#7B941C" }} />,
     image: "/assets/pic-3.jpg",
   },
-
 ];
 
 const RulesSection = () => {
@@ -58,7 +57,9 @@ const RulesSection = () => {
 
   return (
     <section className="relative bg-white py-20 px-4 font-['Lato']">
-      <div className="text-sm text-purple-700 font-semibold mb-2">Rules & Guidelines</div>
+      <div className="text-sm font-semibold mb-2" style={{ color: "#7B941C" }}>
+        Rules & Guidelines
+      </div>
       <h2 className="text-2xl md:text-3xl font-bold text-black mb-10">
         Registrations Open for JuristQuest 2025
         <br /> Calling All South Indian Law Colleges!
@@ -93,7 +94,10 @@ const RulesSection = () => {
                 <p className="text-sm mb-4">{card.description}</p>
                 <a
                   href="/register"
-                  className="text-purple-400 hover:text-purple-200 text-sm font-medium underline"
+                  className="text-sm font-medium underline transition"
+                  style={{ color: "#B5C760" }}
+                  onMouseOver={(e) => (e.target.style.color = "#7B941C")}
+                  onMouseOut={(e) => (e.target.style.color = "#B5C760")}
                 >
                   Register now
                 </a>

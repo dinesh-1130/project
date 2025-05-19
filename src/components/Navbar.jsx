@@ -13,10 +13,31 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Initialize AOS when component mounts
+  useEffect(() => {
+    // This is where you would normally initialize AOS
+    // If you're using a script tag to import AOS, you would do:
+    // AOS.init({ duration: 800, once: true });
+    
+    // Since AOS should be imported via CDN in your HTML file:
+    // <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    // <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    if (typeof window !== 'undefined' && window.AOS) {
+      window.AOS.init({
+        duration: 800,
+        once: true,
+        easing: 'ease-in-out',
+      });
+    }
+  }, []);
+
   return (
     <div className="relative font-['Lato']">
       {/* Navbar */}
       <nav
+        data-aos="fade-down"
+        data-aos-duration="600"
         className={`fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center transition-all duration-300 ${
           scrolled
             ? "bg-white/80 backdrop-blur-md shadow-md text-black"
@@ -28,24 +49,28 @@ export default function Navbar() {
           src="/assets/new-logo-2.png"
           alt="JuristQuest Logo"
           className="h-10 w-auto"
+          data-aos="zoom-in"
+          data-aos-delay="100"
         />
 
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex space-x-10 text-base font-medium text-inherit">
-          <li><a href="/">Home</a></li>
-          <li><a href="/aboutus">About us</a></li>
-          <li><a href="/registrations">Registrations</a></li>
-          <li><a href="/rules">Rules & Guidelines</a></li>
-          <li><a href="/sponsorship">Sponsorship</a></li>
-          <li><a href="/faqs">FAQ’s</a></li>
-          <li><a href="/contactus">Contact Us</a></li>
+          <li data-aos="fade-down" data-aos-delay="200"><a href="/" className="hover:text-[#6B21A8] transition-colors">Home</a></li>
+          <li data-aos="fade-down" data-aos-delay="250"><a href="/aboutus" className="hover:text-[#6B21A8] transition-colors">About us</a></li>
+          <li data-aos="fade-down" data-aos-delay="300"><a href="/registrations" className="hover:text-[#6B21A8] transition-colors">Registrations</a></li>
+          <li data-aos="fade-down" data-aos-delay="350"><a href="/rules" className="hover:text-[#6B21A8] transition-colors">Rules & Guidelines</a></li>
+          <li data-aos="fade-down" data-aos-delay="400"><a href="/sponsorship" className="hover:text-[#6B21A8] transition-colors">Sponsorship</a></li>
+          <li data-aos="fade-down" data-aos-delay="450"><a href="/faqs" className="hover:text-[#6B21A8] transition-colors">FAQ's</a></li>
+          <li data-aos="fade-down" data-aos-delay="500"><a href="/contactus" className="hover:text-[#6B21A8] transition-colors">Contact Us</a></li>
         </ul>
 
         {/* Register Button */}
         <div className="hidden lg:flex items-center space-x-4">
           <a
             href="/register"
-            className=" bg-[#6B21A8] text-white px-5 py-2 rounded font-semibold hover:bg-[#6a8700] transition"
+            className="bg-[#7B941C] text-white px-5 py-2 rounded font-semibold hover:bg-[#6a8700] transition"
+            data-aos="fade-left"
+            data-aos-delay="600"
           >
             Register now
           </a>
@@ -58,6 +83,8 @@ export default function Navbar() {
             className={`w-9 h-9 flex items-center justify-center border rounded-full cursor-pointer ${
               scrolled ? "border-black text-black" : "border-white text-white"
             }`}
+            data-aos="fade-left"
+            data-aos-delay="100"
           >
             <Menu className="w-5 h-5" />
           </div>
@@ -68,27 +95,49 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="fixed top-0 left-0 w-full h-screen z-50 bg-white text-black p-6 transition-all duration-300 animate-fadeDown overflow-y-auto">
           <div className="flex justify-between items-center mb-6">
-            <img src="/assets/new-logo.png" alt="Logo" className="h-10" />
+            <img 
+              src="/assets/new-logo.png" 
+              alt="Logo" 
+              className="h-10" 
+              data-aos="zoom-in"
+              data-aos-duration="400"
+            />
             <button
               onClick={() => setMobileMenuOpen(false)}
               className="w-9 h-9 border border-black rounded-full flex items-center justify-center"
+              data-aos="zoom-in"
+              data-aos-duration="400"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
 
           <ul className="space-y-6 text-lg font-semibold">
-            <li><a href="/">Home</a></li>
-            <li><a href="/aboutus" onClick={() => setMobileMenuOpen(false)}>About us</a></li>
-            <li><a href="/registrations" onClick={() => setMobileMenuOpen(false)}>Registrations</a></li>
-            <li><a href="/rules" onClick={() => setMobileMenuOpen(false)}>Rules & Guidelines</a></li>
-            <li><a href="/sponsorship" onClick={() => setMobileMenuOpen(false)}>Sponsorship</a></li>
-            <li><a href="/faqs" onClick={() => setMobileMenuOpen(false)}>FAQ’s</a></li>
-            <li><a href="/contactus" onClick={() => setMobileMenuOpen(false)}>Contact Us</a></li>
-            <li>
+            <li data-aos="fade-right" data-aos-delay="100" data-aos-duration="400">
+              <a href="/" className="hover:text-[#6B21A8] transition-colors block">Home</a>
+            </li>
+            <li data-aos="fade-right" data-aos-delay="150" data-aos-duration="400">
+              <a href="/aboutus" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">About us</a>
+            </li>
+            <li data-aos="fade-right" data-aos-delay="200" data-aos-duration="400">
+              <a href="/registrations" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Registrations</a>
+            </li>
+            <li data-aos="fade-right" data-aos-delay="250" data-aos-duration="400">
+              <a href="/rules" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Rules & Guidelines</a>
+            </li>
+            <li data-aos="fade-right" data-aos-delay="300" data-aos-duration="400">
+              <a href="/sponsorship" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Sponsorship</a>
+            </li>
+            <li data-aos="fade-right" data-aos-delay="350" data-aos-duration="400">
+              <a href="/faqs" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">FAQ's</a>
+            </li>
+            <li data-aos="fade-right" data-aos-delay="400" data-aos-duration="400">
+              <a href="/contactus" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Contact Us</a>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="450" data-aos-duration="400">
               <a
                 href="/register"
-                className="inline-block mt-4 bg-[#7A9A01] text-white px-6 py-2 rounded font-semibold hover:bg-[#6a8700] transition"
+                className="inline-block mt-4 bg-[#7B941C] text-white px-6 py-2 rounded font-semibold hover:bg-[#6a8700] transition"
               >
                 Register now
               </a>

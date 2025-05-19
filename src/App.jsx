@@ -45,16 +45,18 @@ function Home() {
         <About />
       </div>
       <TrustedBy />
+       <SocialMediaSection />
        <Whoweare />
       <OurSolutions />
          <SuccessStories />
       <SocialResponsibility />
    
      
-      <SocialMediaSection />
+     
       {/* <Posts /> */}
-      <Locations />
       <Partners />
+      <Locations />
+      
     </>
   );
 }

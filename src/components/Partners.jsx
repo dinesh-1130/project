@@ -27,24 +27,27 @@ export default function FaqSection() {
   return (
     <section className="relative bg-white text-gray-800 py-20 font-['Lato']">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-start gap-12 px-6">
-        
+
         {/* FAQ Section */}
         <div data-aos="fade-right">
-          <p className="text-sm font-semibold text-purple-700 mb-2">FAQ's</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Your question will answered</h2>
+          <p className="text-sm font-semibold mb-2" style={{ color: "#7B941C" }}>FAQ's</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            Your question will answered
+          </h2>
 
           <div className="space-y-4">
             {faqData.map((question, index) => (
               <div key={index} className="border-b border-gray-300 pb-3">
                 <button
-                  className="w-full flex justify-between items-center text-left text-gray-800 font-medium text-sm hover:text-purple-700 transition"
+                  className="w-full flex justify-between items-center text-left text-gray-800 font-medium text-sm transition"
+                  style={{ color: activeIndex === index ? "#7B941C" : undefined }}
                   onClick={() => toggleIndex(index)}
                 >
                   <span>{String(index + 1).padStart(2, "0")}. {question}</span>
                   {activeIndex === index ? (
-                    <FaChevronUp className="text-purple-600 text-xs" />
+                    <FaChevronUp className="text-xs" style={{ color: "#7B941C" }} />
                   ) : (
-                    <FaChevronDown className="text-purple-600 text-xs" />
+                    <FaChevronDown className="text-xs" style={{ color: "#7B941C" }} />
                   )}
                 </button>
                 {activeIndex === index && (
