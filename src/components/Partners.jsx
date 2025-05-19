@@ -30,7 +30,7 @@ export default function FaqSection() {
 
         {/* FAQ Section */}
         <div data-aos="fade-right">
-          <p className="text-sm font-semibold mb-2" style={{ color: "#7B941C" }}>FAQ's</p>
+          <p className="text-sm font-semibold mb-2" style={{ color: "#6B21A8" }}>FAQ's</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
             Your question will answered
           </h2>
@@ -40,14 +40,14 @@ export default function FaqSection() {
               <div key={index} className="border-b border-gray-300 pb-3">
                 <button
                   className="w-full flex justify-between items-center text-left text-gray-800 font-medium text-sm transition"
-                  style={{ color: activeIndex === index ? "#7B941C" : undefined }}
+                  style={{ color: activeIndex === index ? "#6B21A8" : undefined }}
                   onClick={() => toggleIndex(index)}
                 >
                   <span>{String(index + 1).padStart(2, "0")}. {question}</span>
                   {activeIndex === index ? (
-                    <FaChevronUp className="text-xs" style={{ color: "#7B941C" }} />
+                    <FaChevronUp className="text-xs" style={{ color: "#6B21A8" }} />
                   ) : (
-                    <FaChevronDown className="text-xs" style={{ color: "#7B941C" }} />
+                    <FaChevronDown className="text-xs" style={{ color: "#6B21A8" }} />
                   )}
                 </button>
                 {activeIndex === index && (

@@ -56,24 +56,24 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex space-x-10 text-base font-medium text-inherit">
           <li data-aos="fade-down" data-aos-delay="200"><a href="/" className="hover:text-[#6B21A8] transition-colors">Home</a></li>
-          <li data-aos="fade-down" data-aos-delay="250"><a href="/aboutus" className="hover:text-[#6B21A8] transition-colors">About us</a></li>
+          <li data-aos="fade-down" data-aos-delay="250"><a href="/aboutus1" className="hover:text-[#6B21A8] transition-colors">About us</a></li>
           <li data-aos="fade-down" data-aos-delay="300"><a href="/registrations" className="hover:text-[#6B21A8] transition-colors">Registrations</a></li>
           <li data-aos="fade-down" data-aos-delay="350"><a href="/rules" className="hover:text-[#6B21A8] transition-colors">Rules & Guidelines</a></li>
-          <li data-aos="fade-down" data-aos-delay="400"><a href="/sponsorship" className="hover:text-[#6B21A8] transition-colors">Sponsorship</a></li>
+          <li data-aos="fade-down" data-aos-delay="400"><a href="/aboutus" className="hover:text-[#6B21A8] transition-colors">Sponsorship</a></li>
           <li data-aos="fade-down" data-aos-delay="450"><a href="/faqs" className="hover:text-[#6B21A8] transition-colors">FAQ's</a></li>
           <li data-aos="fade-down" data-aos-delay="500"><a href="/contactus" className="hover:text-[#6B21A8] transition-colors">Contact Us</a></li>
         </ul>
 
         {/* Register Button */}
         <div className="hidden lg:flex items-center space-x-4">
-          <a
-            href="/register"
-            className="bg-[#7B941C] text-white px-5 py-2 rounded font-semibold hover:bg-[#6a8700] transition"
-            data-aos="fade-left"
-            data-aos-delay="600"
-          >
-            Register now
-          </a>
+        <a
+  href="/register"
+  className="bg-[#6B21A8] text-white px-5 py-2 rounded font-semibold hover:bg-[#581C87] transition"
+  data-aos="fade-left"
+  data-aos-delay="600"
+>
+  Register now
+</a>
         </div>
 
         {/* Mobile Icon */}
@@ -117,7 +117,7 @@ export default function Navbar() {
               <a href="/" className="hover:text-[#6B21A8] transition-colors block">Home</a>
             </li>
             <li data-aos="fade-right" data-aos-delay="150" data-aos-duration="400">
-              <a href="/aboutus" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">About us</a>
+              <a href="/aboutus1" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">About us</a>
             </li>
             <li data-aos="fade-right" data-aos-delay="200" data-aos-duration="400">
               <a href="/registrations" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Registrations</a>
@@ -126,7 +126,7 @@ export default function Navbar() {
               <a href="/rules" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Rules & Guidelines</a>
             </li>
             <li data-aos="fade-right" data-aos-delay="300" data-aos-duration="400">
-              <a href="/sponsorship" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Sponsorship</a>
+              <a href="/aboutus" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Sponsorship</a>
             </li>
             <li data-aos="fade-right" data-aos-delay="350" data-aos-duration="400">
               <a href="/faqs" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">FAQ's</a>
@@ -135,12 +135,13 @@ export default function Navbar() {
               <a href="/contactus" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#6B21A8] transition-colors block">Contact Us</a>
             </li>
             <li data-aos="fade-up" data-aos-delay="450" data-aos-duration="400">
-              <a
-                href="/register"
-                className="inline-block mt-4 bg-[#7B941C] text-white px-6 py-2 rounded font-semibold hover:bg-[#6a8700] transition"
-              >
-                Register now
-              </a>
+             <a
+  href="/register"
+  className="inline-block mt-4 bg-[#6B21A8] text-white px-6 py-2 rounded font-semibold hover:bg-[#581C87] transition"
+>
+  Register now
+</a>
+
             </li>
           </ul>
         </div>

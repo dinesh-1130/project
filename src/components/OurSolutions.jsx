@@ -10,42 +10,42 @@ const ruleCards = [
     title: "Team Composition",
     description:
       "Each team must consist of three members: two orators and one researcher for balanced participation and preparation.",
-    icon: <FaUsers className="text-xl" style={{ color: "#7B941C" }} />,
+    icon: <FaUsers className="text-xl text-purple-800" />,
     image: "/assets/social-1.jpg",
   },
   {
     title: "Eligibility",
     description:
       "Only students from recognized South Indian law colleges are eligible to participate in the competition.",
-    icon: <FaUserGraduate className="text-xl" style={{ color: "#7B941C" }} />,
+    icon: <FaUserGraduate className="text-xl text-purple-800" />,
     image: "/assets/social-2.jpg",
   },
   {
     title: "Competition Format",
     description:
       "Starts online with prelims and quarters, then transitions onsite for semifinals and finale to test performance under varied environments.",
-    icon: <FaProjectDiagram className="text-xl" style={{ color: "#7B941C" }} />,
+    icon: <FaProjectDiagram className="text-xl text-purple-800" />,
     image: "/assets/social-3.jpg",
   },
   {
     title: "Team Composition",
     description:
       "Each team must consist of three members: two orators and one researcher for balanced participation and preparation.",
-    icon: <FaUsers className="text-xl" style={{ color: "#7B941C" }} />,
+    icon: <FaUsers className="text-xl text-purple-800" />,
     image: "/assets/pic-1.jpg",
   },
   {
     title: "Eligibility",
     description:
       "Only students from recognized South Indian law colleges are eligible to participate in the competition.",
-    icon: <FaUserGraduate className="text-xl" style={{ color: "#7B941C" }} />,
+    icon: <FaUserGraduate className="text-xl text-purple-800" />,
     image: "/assets/pic-2.jpg",
   },
   {
     title: "Competition Format",
     description:
       "Starts online with prelims and quarters, then transitions onsite for semifinals and finale to test performance under varied environments.",
-    icon: <FaProjectDiagram className="text-xl" style={{ color: "#7B941C" }} />,
+    icon: <FaProjectDiagram className="text-xl text-purple-800" />,
     image: "/assets/pic-3.jpg",
   },
 ];
@@ -57,7 +57,7 @@ const RulesSection = () => {
 
   return (
     <section className="relative bg-white py-20 px-4 font-['Lato']">
-      <div className="text-sm font-semibold mb-2" style={{ color: "#7B941C" }}>
+      <div className="text-sm font-semibold mb-2 text-purple-800">
         Rules & Guidelines
       </div>
       <h2 className="text-2xl md:text-3xl font-bold text-black mb-10">
@@ -95,9 +95,9 @@ const RulesSection = () => {
                 <a
                   href="/register"
                   className="text-sm font-medium underline transition"
-                  style={{ color: "#B5C760" }}
-                  onMouseOver={(e) => (e.target.style.color = "#7B941C")}
-                  onMouseOut={(e) => (e.target.style.color = "#B5C760")}
+                  style={{ color: "#9F7AEA" }}
+                  onMouseOver={(e) => (e.target.style.color = "#6B21A8")}
+                  onMouseOut={(e) => (e.target.style.color = "#9F7AEA")}
                 >
                   Register now
                 </a>

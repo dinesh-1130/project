@@ -48,7 +48,7 @@ function Home() {
        <SocialMediaSection />
        <Whoweare />
       <OurSolutions />
-         <SuccessStories />
+         {/* <SuccessStories /> */}
       <SocialResponsibility />
    
      
